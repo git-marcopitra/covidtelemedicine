@@ -1,0 +1,92 @@
+@font-face {
+    font-family: LibertySans;
+    src: url('../fonts/LibertySans/LibertySans.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+    font-family: Ubuntu-Medium;
+    src: url('../fonts/Ubuntu/Ubuntu-Medium.ttf');
+}
+
+:root {
+    --primary-color: rgb(95, 202, 68);
+    --background-color-1: rgb(40, 40, 40);
+    --background-color-2: rgb(60, 60, 60);
+    --font-color-1: rgb(255, 255, 255);
+}
+
+* {
+    font-family: Ubuntu-Medium;
+}
+
+body {
+    background-color: var(--background-color-2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    font-family: Ubuntu-Bold;
+}
+
+.button-primary {
+    background-color: var(--primary-color);
+}
+
+.button-facebook {
+    background-color: rgb(23, 63, 241);
+    color: white;
+}
+
+.button-secundary {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.main-header {
+    justify-content: space-between;
+    align-items: center;
+    height: calc(4rem - 5px);
+    background-color: var(--background-color-1);
+    padding: 1rem 2rem;
+    border-bottom: 5px solid var(--primary-color);
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+.main-header-item {
+    font-size: 1.5rem;
+}
+
+.option {
+    background-color: var(--primary-color);
+}
+
+.option-mask {
+    background-color: var(--background-color-1);
+    color: var(--font-color-1)
+}
+
+.head-title-xl {
+    color: var(--primary-color)
+}
+
+.head-text-l,
+.head-title-l {
+    color: var(--font-color-1)
+}
