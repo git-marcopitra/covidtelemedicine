@@ -23,7 +23,24 @@ const hideAllElements = ($elements) => {
 
 const login = () => {
     isLogged = true
-    const userIcon = document.getElementById('session-icon')
-    userIcon.classList.remove('fal')
-    userIcon.classList.add('fas')
+    changeUserIcon()
+}
+
+const logout = () => {
+    isLogged = false
+    changeUserIcon()
+}
+
+const changeUserIcon = () => {
+    const userIcon = document.getElementById('user-icon')
+    toggleClass(userIcon, 'fal', 'fas')
+}
+const toggleClass = ($element, $class1, $class2) => {
+    if ($element.classList.contains($class1)) {
+        $element.classList.remove($class1)
+        $element.classList.add($class2)
+    } else {
+        $element.classList.remove($class2)
+        $element.classList.add($class1)
+    }
 }

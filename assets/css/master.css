@@ -4,8 +4,23 @@
     box-sizing: border-box;
 }
 
+html {
+    width: 100vw
+}
+
 body {
     overflow-x: hidden;
+    width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
 }
 
 input {
@@ -49,6 +64,7 @@ button:hover {
     padding: 0;
     margin: 0;
     background-color: transparent;
+    font-size: inherit;
 }
 
 .transparent:hover {
@@ -59,12 +75,50 @@ button:hover {
 
 .main-header {
     display: flex;
+    padding: 1rem 2rem;
+}
+
+.main-header-brand {
+    text-align: center;
 }
 
 .main-header-item {
     min-width: 2rem;
     min-height: 2rem;
     text-align: center;
+}
+
+.main-menu {
+    top: 5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    color: white
+}
+
+.menu-item {
+    font-size: 3vh;
+    padding: 1rem;
+    margin: 0;
+    transition: all 300ms;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu-item:hover {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+    transform: scale(1.3);
+}
+
+.menu-item:active {
+    transform: scale(10);
 }
 
 #modal {
@@ -87,6 +141,8 @@ button:hover {
     width: 350px;
     padding: 1rem;
     min-height: 350px;
+    max-height: 80vh;
+    overflow-y: auto;
     z-index: 1;
 }
 
@@ -115,10 +171,14 @@ button:hover {
     display: flex;
     align-items: center;
     width: 70%;
+    padding: 1rem;
 }
 
 .welcome-image img {
     width: 100%;
+}
+
+.welcome-img {
     filter: grayscale(0.8);
 }
 
@@ -140,7 +200,7 @@ button:hover {
     width: 100%;
 }
 
-.main-content {
+main {
     margin: 1rem auto;
     max-width: 1440px;
 }
@@ -158,7 +218,7 @@ button:hover {
     display: flex;
     height: 10rem;
     margin: 1rem .5rem .5rem;
-    min-width: 300px;
+    min-width: 310px;
     width: calc(50% - 1rem);
     border-radius: 5px;
     overflow: hidden;
@@ -180,16 +240,17 @@ button:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 2rem;
     transition: all 200ms;
     cursor: pointer;
 }
 
 .option-mask {
+    padding: 2rem 3rem;
     margin-left: -98%;
 }
 
 .option-face {
+    padding: 2rem;
     margin-right: -2%;
 }
 

@@ -20,8 +20,10 @@
 
 :root {
     --primary-color: rgb(95, 202, 68);
+    --warning-color: rgb(202, 68, 68);
     --background-color-1: rgb(40, 40, 40);
     --background-color-2: rgb(60, 60, 60);
+    --background-color-3: rgb(50, 50, 50);
     --font-color-1: rgb(255, 255, 255);
 }
 
@@ -47,12 +49,17 @@ h6 {
     background-color: var(--primary-color);
 }
 
+.button-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
 .button-facebook {
     background-color: rgb(23, 63, 241);
     color: white;
 }
 
-.button-secundary {
+.button-secondary {
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -61,9 +68,8 @@ h6 {
 .main-header {
     justify-content: space-between;
     align-items: center;
-    height: calc(4rem - 5px);
+    height: 5rem;
     background-color: var(--background-color-1);
-    padding: 1rem 2rem;
     border-bottom: 5px solid var(--primary-color);
     color: white;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
@@ -78,7 +84,7 @@ h6 {
 }
 
 .option-mask {
-    background-color: var(--background-color-1);
+    background-color: var(--background-color-3);
     color: var(--font-color-1)
 }
 

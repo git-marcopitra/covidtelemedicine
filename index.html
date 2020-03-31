@@ -6,97 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/dist/font-awesome-5-pro/css/all.css">
     <link rel="stylesheet" href="./assets/css/master.css">
-    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link id="importMain" rel="stylesheet" href="./assets/css/custom.css">
+    <link id="main" rel="import" href="./pages/main.html">
+    <link id="team" rel="import" href="./pages/team.html">
+    <link id="contributors" rel="import" href="./pages/contributors.html">
+    <link id="aboutus" rel="import" href="./pages/aboutus.html">
     <title>COVID-19 :: Telemedicina</title>
 </head>
 
 <body>
     <header class="main-header">
-        <i class="fas fa-bars main-header-item"></i>
+        <button id="menu-button" class="transparent"><i id="menu-icon" class="fas fa-bars main-header-item"></i></button>
         <h2 class="main-header-brand">COVID Telemedicina</h2>
-        <i id="session-icon" class="fal fa-user-circle main-header-item"></i>
+        <button id="user-button" class="transparent"><i id="user-icon" class="fal fa-user-circle main-header-item"></i></button>
     </header>
-    <main class="main-content">
-        <section class="content-head">
-            <div class="head-image">
-                <img src="./assets/images/virus-illustration.png" alt="virus-illustration">
-            </div>
-            <div class="head-text">
-                <h1 class="head-title-xl">COVID-19</h1>
-                <h1 class="head-title-l">Proteja a si e aos seus</h1>
-                <p class="head-text-l">Faça o seu teste e ajude outras pessoas com o máximo de informações possíveis, juntos somos mais fortes</p>
-            </div>
-        </section>
-        <section class="options">
-            <div class="option">
-                <div class="option-mask">
-                    <i class="fal fa-file-medical-alt mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Teste diário</h2>
-                        <p class="option-desc">Faça o seu teste diário agora mesmo </p>
-                    </div>
-                </div>
-                <div class="option-face">
-                    <i class="fal fa-file-medical-alt mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Teste diário</h2>
-                        <p class="option-desc">Faça o seu teste diário agora mesmo </p>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="option-mask">
-                    <i class="fal fa-chart-line-down
-                    mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Resultado estatístico </h2>
-                        <p class="option-desc"> Vejo o resultado do teste em outras pessoas </p>
-                    </div>
-                </div>
-                <div class="option-face">
-                    <i class="fal fa-chart-line-down
-                    mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Resultado estatístico </h2>
-                        <p class="option-desc"> Vejo o resultado do teste em outras pessoas </p>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="option-mask">
-                    <i class="fal fa-map-marked-alt mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Estatística no mapa </h2>
-                        <p class="option-desc"> Acompanhe os dados de propagação do vírus através do mapa </p>
-                    </div>
-                </div>
-                <div class="option-face">
-                    <i class="fal fa-map-marked-alt mask-icon"></i>
-                    <div class="text-content">
-                        <h2 class="option-title"> Estatística no mapa </h2>
-                        <p class="option-desc"> Acompanhe os dados de propagação do vírus através do mapa </p>
-                    </div>
-                </div>
-            </div>
-            <div class="option">
-                <div class="option-mask">
-                    <i class="fal fa-laptop-medical mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Telemedicina </h2>
-                        <p class="option-desc"> Tenha o previlégio de ser acompanhado por um médico em sua casa </p>
-                    </div>
-                </div>
-                <div class="option-face">
-                    <i class="fal fa-laptop-medical mask-icon"></i>
-                    <div class="text-content">
-                        <h2> Telemedicina </h2>
-                        <p class="option-desc"> Tenha o previlégio de ser acompanhado por um médico em sua casa </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <nav id="main-menu" class="main-menu invisible">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="http://covidango.web.app" target="_blank" rel="noopener noreferrer">
+                    <h3><i class="fal fa-window-alt"></i> Portal Informativo </h3>
+                </a>
+            </li>
+            <li class="menu-item">
+                <button id="change-main" value="main" class="transparent">
+                    <h3><i class="fal fa-home "></i> Página Inicial </h3>
+                </button>
+            </li>
+            <li class="menu-item">
+                <button id="change-main" value="team" class="transparent">
+                    <h3><i class="fal fa-users-class "></i> Nossa Equipa </h3>
+                </button>
+            </li>
+            <li class="menu-item">
+                <button id="change-main" value="contributors" class="transparent">
+                    <h3><i class="fal fa-handshake-alt"></i> Colaboradores </h3>
+                </button>
+            </li>
+            <li class="menu-item">
+                <button id="change-main" value="aboutus" class="transparent">
+                    <h3><i class="fal fa-handshake-alt"></i> Sobre Nós </h3>
+                </button>
+            </li>
+        </ul>
+    </nav>
 
+    <main id="router"></main>
 
 
     <div id="modal" class="invisible">
@@ -108,25 +62,18 @@
             </header>
             <div class="modal-body">
                 <div class="welcome-image">
-                    <img src="./assets/images/welcome-illustration.png" alt="Imagem de Boas vindas">
+                    <img class="welcome-img" src="./assets/images/welcome-illustration.png" alt="Imagem de Boas vindas">
                 </div>
                 <div class="modal-content">
                     <p class="modal-text"> Seja bem-vindo ao Teste de COVID-19 em Angola. Se ainda não tem uma conta
                         <bold>registe-se já</bold>, é rápidinho... </p>
                 </div>
                 <div class="modal-buttons">
-                    <button id="change-modal" value="sign-in" class="modal-button button-secundary"> Já tenho </button>
+                    <button id="change-modal" value="sign-in" class="modal-button button-secondary"> Já tenho </button>
                     <button id="change-modal" value="sign-up" class="modal-button button-primary"> Registar </button>
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
 
         <section id="sign-in" class="modal invisible">
             <header class="modal-header">
@@ -138,11 +85,11 @@
                 <div class="modal-content">
                     <label for="signin-id" id="label-signin-id" class="invisible">Número de BI ou Passaporte</label>
                     <input type="text" placeholder="Número de BI ou Passaporte" class="field" id="signin-id" required>
-                    <label for="signin-pass" id="label-signin-pass" class="invisible">Nome Completo</label>
+                    <label for="signin-pass" id="label-signin-pass" class="invisible">Palavra-passe</label>
                     <input type="password" placeholder="Palavra-passe" id="signin-pass" class="field" required>
                 </div>
                 <div class="modal-buttons">
-                    <button id="change-modal" value="sign-up" class="modal-button button-secundary"> Registar </button>
+                    <button id="change-modal" value="sign-up" class="modal-button button-secondary"> Registar </button>
                     <button id="change-modal" value="login" class="modal-button button-primary"> Entrar </button>
                 </div>
                 <div class="modal-buttons">
@@ -150,13 +97,6 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
 
         <section id="sign-up" class="modal invisible">
             <header class="modal-header">
@@ -179,7 +119,7 @@
                     <input type="password" placeholder="Palavra-passe" class="field" id="signup-pass" required>
                 </div>
                 <div class="modal-buttons">
-                    <button id="change-modal" value="sign-in" class="modal-button button-secundary"> Entrar </button>
+                    <button id="change-modal" value="sign-in" class="modal-button button-secondary"> Entrar </button>
                     <button id="change-modal" value="signup" class="modal-button button-primary"> Registar </button>
                 </div>
                 <div class="modal-buttons">
@@ -187,7 +127,28 @@
                 </div>
             </div>
         </section>
+
+
+        <section id="account" class="modal invisible">
+            <header class="modal-header">
+                <i id="modal-info" class="fal fa-info-circle modal-icon"></i>
+                <h4 class="modal-title"> Conta </h4>
+                <i id="close-modal" class="fal fa-times modal-icon"></i>
+            </header>
+            <div class="modal-body">
+                <div class="welcome-image">
+                    <img src="./assets/images/account-settings-illustration.png" alt="Configuração da sua conta">
+                </div>
+                <div class="modal-buttons">
+                    <button id="change-modal" value="signup" class="modal-button button-secondary"> Definições de conta </button>
+                </div>
+                <div class="modal-buttons">
+                    <button id="change-modal" value="logout" class="modal-button button-warning"> Terminar Sessão </button>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="./assets/js/functional/router.js"></script>
     <script src="./assets/js/functional/functional-script.js"></script>
     <script src="./assets/js/layout/default-functions.js"></script>
     <script src="./assets/js/layout/layout-scripts.js"></script>
