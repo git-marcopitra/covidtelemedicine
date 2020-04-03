@@ -117,8 +117,13 @@
               "devServerTarget": "telecovidcina:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "telecovidcina"
 }
